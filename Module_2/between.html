@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Select Between City
+{% endblock %}
+
+{% block main %}
+
+<h1>You have to choose a city to get a rest</h1>
+    <form action="/between" method="POST">
+        <p>Choose a rest place between cities {{f}} and {{t}}</p>
+        <br><br>
+        {% if message %}
+            <p>{{message}}</p>
+        {% endif %}
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="between" name="between" placeholder="Select between city" type="text" required>
+        </div><br>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
